@@ -1,62 +1,33 @@
-# CodeIgniter 4 Application Starter
+# CARTLEY TASK
+This project is built using Codeigniter 4.
 
-## What is CodeIgniter?
+<hr>
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+### Getting Started
+To get started with the project, follow these steps:
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+Clone the project repository to your local machine.
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+Run ``composer install`` to install the required dependencies. Make sure you have Composer version 2 or above.
 
-The user guide corresponding to the latest version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+Start the Codeigniter project by running the following command in the project directory:
+``php spark serve``
 
-## Installation & updates
+<hr>
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+### Project Structure
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+The main entry point for all classes is the ``controllers/Cartley.php`` file.
 
-## Setup
+Here are the tasks available in the ``app/classes`` directory:
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+Factorial: Calculate the factorial of a given number.
 
-## Important Change with index.php
+URL: ``baseUrl/factorial/{:num}`` (Replace `{:num}` with the value you want to calculate the factorial for.)
+Binary Tree: Perform operations on a binary tree.
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+URL: ``baseUrl/binary-tree/{:string-tree}`` (Use the format `1,2-2,4-2,7` for the string tree, which corresponds to `[(1,2), (2,4), (2,7)]`.)
+OOP: Test or log the result of your object modifications.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
-
-**Please** read the user guide for a better explanation of how CI4 works!
-
-## Repository Management
-
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Server Requirements
-
-PHP version 7.4 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+URL: ``baseUrl/oop``
+Feel free to explore these tasks and test them in your browser.
