@@ -21,23 +21,23 @@
 <span style="opacity: 0.6"># App\classes\Factorial.php</span>
 
 /**
- * @param string $textTree
- * @return bool
+ * @param int $number
+ * @return int
+ * This function will calculate the factorial based on input Number.
+ * Time Complexity => O(n) // n is the input number.
  */
-public static function checkBinaryTree(string $textTree): bool
+public static function calculateFactorial(int $number): int
 {
-    $arrayTree = [];
-    $arrayPairs = explode('-', $textTree);
-    foreach ($arrayPairs as $textPair) {
-        $arrayPair = explode(',', $textPair);
-        if (count($arrayPair) !== 2) {
-            throw new \Error("Error: Pair should contains only 2 items");
+    $factorial = 1;
+    while ($number > 1) {
+        $factorial *= $number;
+        $number--;
+        if ($factorial > PHP_INT_MAX) {
+            throw new \Error("Error: The number exceeds the maximum integer value.");
         }
-        $treeKey = array_pop($arrayPair);
-        if (empty($arrayTree[$treeKey])) {
-            $arrayTree[$treeKey] = [array_pop($arrayPair)];
-            continue;
-        }
+    }
+    return $factorial;
+}
             </pre>
         </div>
     </div>

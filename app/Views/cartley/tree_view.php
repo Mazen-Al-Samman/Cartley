@@ -34,7 +34,7 @@ public static function checkBinaryTree(string $textTree): bool
         $arrayPair = explode(',', $textPair);
 
         if (count($arrayPair) !== 2) {
-            throw new \Error("Error: Pair should contains of 2 items");
+            throw new \Error("Error: Pair should contains only 2 items");
         }
 
         $treeKey = array_pop($arrayPair);

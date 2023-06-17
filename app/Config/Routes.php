@@ -32,6 +32,7 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->get('/factorial/(:num)', 'Cartley::factorial/$1');
 $routes->get('/binary-tree/(:any)', 'Cartley::binaryTree/$1');
+$routes->get('/oop', 'Cartley::OOP');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
